@@ -1,3 +1,5 @@
+require_relative 'bounding_area'
+
 class BoundingBox
   def initialize(left, bottom, width, height)
     @left = left
@@ -33,5 +35,4 @@ class BoundingBox
   def contains_point?(x, y)
     x >= left && x <= right && y >= bottom && y <= top
   end
-
 end
