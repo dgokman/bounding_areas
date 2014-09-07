@@ -15,7 +15,7 @@ class BoundingArea
       return false
     else
       rects.each do |rect|
-        if x >= rect.left && x <= rect.right && y >= rect.bottom && y <= rect.top
+        if rect.contains_point?(x,y)
           return true
         else
           return false
